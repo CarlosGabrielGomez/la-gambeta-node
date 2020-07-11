@@ -37,5 +37,38 @@ Confirmar la versión instalada de git
 $ git --version
 
 
+# Revisar puertos abiertos con nmap
+
+apt install nmap
+
+o instalamos netstat
+
+apt-get install net-tools
+
+
+
+# Abrir puertos con UFW
+1° intalamos con el siguiente comando
+
+apt -y install ufw
+
+2° Abrimos los puertos ssh,http y https
+
+ufw allow ssh
+ufw allow http
+ufw allow https
+
+3°
+
+
+
+4° Revisamos los puertos habilitados
+
+ufw status verbose
+
+
+
+
+
 # Enlances 
 https://linuxize.com/post/how-to-install-node-js-on-debian-10/
