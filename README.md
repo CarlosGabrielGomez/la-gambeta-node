@@ -12,14 +12,23 @@ Este proyecto se ejecuta utilizando los  siguientes **software** :
 - DBeaver: https://dbeaver.io/download/publish 
 - Bitvise SSH Client : https://www.bitvise.com/ssh-client-download
 
-
-
 # Comandos en virtual-box
 
 Salir del modo reesclado :    ctrl-der+c
 
+## Instalación de nodejs en debian 10
 
-## Instalación de node en debian 10
+Primero actualizamos el administradror de paquetes apt con el siguiente comando
+
+> apt update
+
+Segundo ejecutamos el siguiente comando para instalar nodejs
+
+> apt install nodejs npm
+
+verificamos la versión de nodejs
+
+> node -v
 
 
 ## Instalacion de herramientas de desarrollo
