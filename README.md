@@ -1,23 +1,28 @@
-# la-gambeta-node
-Proyecto Proffesional Web Master 2020
+## ¡Bienvenido a la Gambeta!
+Este es un proyecto realizado en el curso **Proyecto Proffesional Web Master 2020** dictado por la **Universidad Tecnológica Nacional Regional Buenos Aires**
+
+## Características Técnicas
+
+Este proyecto se ejecuta utilizando los  siguientes **software** :
+
+- Oracle VM VirtualBox :https://www.virtualbox.org/wiki/Downloads
+- Debian 10 **buster**: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/
+  > **Nota:** La elección de imagen en  **La Gambeta** es **debian-10.4.0-amd64-netinst.iso**
+
+- DBeaver: https://dbeaver.io/download/publish 
+- Bitvise SSH Client : https://www.bitvise.com/ssh-client-download
+
+
 
 # Comandos en virtual-box
 
 Salir del modo reesclado :    ctrl-der+c
 
 
-# Instalación de node en debian 10
-
--actualizamos el gestor de paquetes de Debian 10
-
-apt update
-
--instalamos node js 
-
-apt install nodejs npm
+## Instalación de node en debian 10
 
 
-# Instalacion de herramientas de desarrollo
+## Instalacion de herramientas de desarrollo
 
 apt install build-essential curl
 
