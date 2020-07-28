@@ -151,3 +151,56 @@ A continuacion la siguiente instrucción:
 
 > curl -sL https://deb.nodesource.com/setup_12.x | -E bash -
 
+## Instalación de  MySQL on Debian 10 Linux 
+
+Para instalar MYSQL en debian 10 debemos usar el comando wget:
+
+> wget http://repo.mysql.com/mysql-apt-config_0.8.13-1_all.deb
+
+Después debemos ejecutar el siguiente comando :
+
+> apt install ./mysql-apt-config_0.8.13-1_all.deb
+
+> **Nota:** Se abrirá una terminal donde debemos elegir MySQL Server & Cluster (Currently selected: mysql-8.0)
+ 
+ Ahora necesitamos actualizar el  package y para ello debemos ejecutar la siguiente instruccion:
+ 
+> apt update
+
+Finalmente procedemos a instalar el servidor mysql:
+
+> apt install mysql-server
+
+Verificamos la instalación de MYSQL 
+
+>  systemctl status mysql
+ 
+## creación de un usuario administrador
+
+Primero debemos ingresar como usuario root 
+
+> mysql -u root -p
+
+ Despué crearemos un usuario indicando la contraseña que queramos:
+ 
+ > create user usuario identified by 'contraseña';
+ 
+ A continuación, otorgamos permisos a este nuevo usuario sobre todas las bases de datos:
+ 
+ > grant all privileges on *.* to chacho with grant option;
+ 
+ Actualizamos la tabla de permisos;
+ 
+> flush privileges;
+
+ Salimos de MYSQL
+ 
+ > exit
+ 
+ 
+
+
+
+
+
+
