@@ -138,13 +138,16 @@ verificamos la versión de nodejs
 
 > node -v
 
+ > **Nota:** La versión por defecto es v10
 
 ## Instalacion de herramientas de desarrollo
 
 apt install build-essential curl
 
+Para actualizar la vesion de nodejs a LTS 12 se debe ejecutar los siguientes comandos:
+> apt install build-essential curl
 
-sudo apt update
-sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+A continuacion la siguiente instrucción:
+
+> curl -sL https://deb.nodesource.com/setup_12.x | -E bash -
 
