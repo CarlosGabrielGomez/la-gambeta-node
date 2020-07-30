@@ -142,14 +142,17 @@ verificamos la versión de nodejs
 
 ## Instalacion de herramientas de desarrollo
 
-apt install build-essential curl
 
 Para actualizar la vesion de nodejs a LTS 12 se debe ejecutar los siguientes comandos:
 > apt install build-essential curl
 
 A continuacion la siguiente instrucción:
 
-> curl -sL https://deb.nodesource.com/setup_12.x | -E bash -
+> curl -sL https://deb.nodesource.com/setup_12.x | bash -
+
+Después debemos ejecutar el siguiente comando :
+
+>  apt-get install nodejs
 
 ## Instalación de  MySQL on Debian 10 Linux 
 
