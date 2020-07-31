@@ -60,6 +60,7 @@ Cuando tenemos que acceder a determinados servicios internos de nuestra VM (máq
 |----------------|----------------|---------------|--------------|
 |     HTTP       |        TCP     |    8080       |    80        |
 |     SSH        |        TCP     |    2222       |    22        |
+|     NODE       |        TCP     |    3030       |    3000      |
 
 
 
