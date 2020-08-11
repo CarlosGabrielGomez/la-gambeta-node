@@ -34,3 +34,35 @@ a {
   background-color: crimson;
   color: white;
 }
+
+
+
+
+.padre {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+}
+
+.hijo {
+  border-radius: 21px 21px 21px 21px;
+  width: calc(100% / 3);
+  background-color: var(--color-blanco);
+  font-size: 2vw;
+  flex-grow: 1;
+  margin: 1%;
+  border: 1px solid black;
+}
+
+
+.fondo {
+  width: 300px;
+  object-fit:contain;
+  height: 50%;
+  margin: 1%;
+}
+
+
+

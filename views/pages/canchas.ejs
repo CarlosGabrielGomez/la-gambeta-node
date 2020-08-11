@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Datos de la cancha</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('../partials/nav.ejs'); -%>
+
+    <form action="/busqueda_proceso" method="GET">
+      <!-- 
+          El atributo name nos sirve para conseguir la información
+          e identificar al campo
+      -->
+      <label>
+        Término de búsqueda:
+        <input type="search" name="termino" />
+      </label>
+      <input type="submit" value="Buscar" />
+    </form>
+
+    <div class="padre">
+      <% llamada.forEach((cancha)=> {%>
+      <div class="hijo">
+        <a href="cancha/<%= cancha.id %>">
+          <img class="fondo" src="<%= cancha.imagen %>" alt="foto de portada" />
+        </a>
+
+        <p><%= cancha.nombre %></p>
+        <p><%= cancha.direccion %></p>
+        <p><%= cancha.localidad %></p>
+      </div>
+
+      <% })%>
+    </div>
+  </body>
+</html>

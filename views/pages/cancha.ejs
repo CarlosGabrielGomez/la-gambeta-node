@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Datos de la cancha</title>
-        <link rel='stylesheet' href='/stylesheets/style.css' >
-    </head>
-    <body>
-        <%- include('../partials/nav.ejs'); -%>
-        <h1><%= nombre %>- <%= apellido %></h1>
-        <h2> <%= documento %></h2>
-        <h4><%= fecha %></h4>
-        <h3> <%= genero%></h3>
+  <head>
+    <title>Datos de la cancha</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('../partials/nav.ejs'); -%>
+    
+    <h1><%= cancha.nombre %></h1>
 
-       
+    <h2><%= cancha.direccion %></h2>
+    <h4><%= cancha.localidad %></h4>
 
-        <img src="<%= imagen %>" alt="foto de portada">
-    </body>
+    <img src="<%= cancha.imagen %>" alt="foto de portada" />
+  </body>
 </html>
