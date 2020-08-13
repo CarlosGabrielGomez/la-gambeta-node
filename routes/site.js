@@ -1,9 +1,6 @@
 var express = require("express");
 var router = express.Router();
-/*+-------------------------------------------------------------+
-  |                             SITIOS      
-  +-------------------------------------------------------------+
-*/
+
 
 const jugadores = require("../api/jugador");
 
@@ -34,7 +31,7 @@ router.get("/inscribirme", async function (req, res, next) {
 
 router.get("/cancha/:id", async (req, res) => {
   const cancha = await canchas.getCourtById(req.params.id);
-  res.render("pages/cancha",{cancha} )
+  res.render("pages/cancha",{cancha} );
 });
 
 

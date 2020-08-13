@@ -13,5 +13,79 @@
     <h4><%= cancha.localidad %></h4>
 
     <img src="<%= cancha.imagen %>" alt="foto de portada" />
+
+
+
+    <form action="/agregar_jugador" method="POST">
+      <label>
+          Nombre:
+          <input type="text" name="nombre" required>
+      </label><br>
+      <label>
+          Apellido:
+          <input type="text" name="apellido" required>
+      </label><br>
+      <label>
+          Fecha de nacimiento:
+          <input type="date" name="fechadenacimiento" required>
+      </label><br>
+
+
+      <label>
+        Documento:
+        <input type="text" name="documento" minlength="1" maxlength="8">
+       </label><br>
+
+      <label>
+        Genero:
+        <select name="genero">
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        </select>
+
+
+      </label><br>
+
+
+  <label>
+    Imagen:
+    <input type="text" name="imagen" maxlength="200" minlength="1" >
+
+  </label>
+
+  <label>
+    <input id="cancha" type="number" name="canchaId" >
+  </label>
+      <input  id="registrar" type="submit" value="agregar">
+  </form>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+    
+      var url =location.href;
+      //console.log(url);
+      let array=url.split("/");
+      let cancha=document.getElementById('cancha');
+      cancha.value=array[array.length-1];
+      cancha.style.display='none';
+     // console.log(cancha.value);
+
+    
+     
+  });
+  registrar.addEventListener(()=>{
+    alert("Su Inscripcion se ha realizado con éxito");
+
+  });
+
+
+
+
+  </script>
+
+
   </body>
 </html>

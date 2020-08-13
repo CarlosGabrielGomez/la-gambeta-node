@@ -10,9 +10,9 @@ const db= require('./models');
 
 ///
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var databaseRouter = require('./routes/database');
-var siteRouter = require('./routes/site');
+//var usersRouter = require('./routes/users');
+//var databaseRouter = require('./routes/database');
+//var siteRouter = require('./routes/site');
 
 var app = express();
 
@@ -27,10 +27,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/users', usersRouter);
 //http://localhost:3030/database/test
-app.use('/database',databaseRouter);
-app.use('/site',siteRouter);
+//app.use('/database',databaseRouter);
+//app.use('/site',siteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
