@@ -1,91 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Datos de la cancha</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <%- include('../partials/nav.ejs'); -%>
-    
-    <h1><%= cancha.nombre %></h1>
 
-    <h2><%= cancha.direccion %></h2>
-    <h4><%= cancha.localidad %></h4>
-
-    <img src="<%= cancha.imagen %>" alt="foto de portada" />
-
-
-
-    <form action="/agregar_jugador" method="POST">
-      <label>
-          Nombre:
-          <input type="text" name="nombre" required>
-      </label><br>
-      <label>
-          Apellido:
-          <input type="text" name="apellido" required>
-      </label><br>
-      <label>
-          Fecha de nacimiento:
-          <input type="date" name="fechadenacimiento" required>
-      </label><br>
-
-
-      <label>
-        Documento:
-        <input type="text" name="documento" minlength="1" maxlength="8">
-       </label><br>
-
-      <label>
-        Genero:
-        <select name="genero">
-        <option value="Masculino">Masculino</option>
-        <option value="Femenino">Femenino</option>
-        </select>
-
-
-      </label><br>
-
-
-  <label>
-    Imagen:
-    <input type="text" name="imagen" maxlength="200" minlength="1" >
-
-  </label>
-
-  <label>
-    <input id="cancha" type="number" name="canchaId" >
-  </label>
-      <input  id="registrar" type="submit" value="agregar">
-  </form>
+        <article class="oferta">
+            <img class="imagen" src="<%= cancha.imagen %>" alt="foto de portada" />
+            <h1>
+                <%= cancha.nombre %>
+            </h1>
+        </article>
 
 
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-    
-      var url =location.href;
-      //console.log(url);
-      let array=url.split("/");
-      let cancha=document.getElementById('cancha');
-      cancha.value=array[array.length-1];
-      cancha.style.display='none';
-     // console.log(cancha.value);
 
-    
-     
-  });
-  registrar.addEventListener(()=>{
-    alert("Su Inscripcion se ha realizado con éxito");
+        <div class="contenedor">
+            <h2>Complete los datos del formulario</h2>
+            <form action="/agregar_jugador" method="POST">
+                <!--datos personales-->
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>Nombre</label>
+                    </div>
+                    <div class="columna-input">
+                        <input id="nombre" type="text" name="nombre" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>Apellido</label>
+                    </div>
+                    <div class="columna-input">
+                        <input type="text" name="apellido" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>
+                 Documento:
+                </label>
+                    </div>
+                    <div class="columna-input">
+                        <input type="text" name="documento" minlength="1" maxlength="8">
+                    </div>
+                </div>
 
-  });
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>
+                         Genero:
+                        </label>
+                    </div>
+                    <div class="columna-input">
+                        <select name="genero">
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  </select>
+                    </div>
+
+                </div>
+                <div class="fila">
+                    <div class="columna-label">
+                        Fecha
+                    </div>
+                    <div class="columna-input">
+                        <input type="date" name="fechanacimiento" required>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>
+               URL imagen:
+              </label>
+
+
+                    </div>
+                    <div class="columna-input">
+                        <input type="text" name="imagen" maxlength="200" minlength="1">
+                    </div>
+
+                </div>
+                <div class="fila-boton">
+                    <button id="registrar" class="boton-sumar" type="submit" value="agregar">Agregar</button>
+                    <button id="limpiar" class="boton-limpiar">Limpiar</button>
+                    <input type="number" id="cancha" name="canchaId">
+                </div>
+
+
+
+        </div>
 
 
 
 
-  </script>
+
+        </form>
 
 
-  </body>
+
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+
+                var url = location.href;
+                //console.log(url);
+                let array = url.split("/");
+                let cancha = document.getElementById('cancha');
+                cancha.value = array[array.length - 1];
+                cancha.style.display = 'none';
+                console.log(cancha.value);
+
+
+
+            });
+            limpiar.addEventListener(function() {
+                console.log(document.getElementById('nombre').value);
+                document.getElementById('nombre').value = "";
+
+
+            });
+        </script>
+
+
+</body>
+
 </html>
