@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Administrador</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    
+
+
+
+
+
+        <div class="contenedor">
+            <h2>Complete los datos del formulario</h2>
+            <form action="/agregar_jugador" method="POST">
+                <!--datos personales-->
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>Nombre</label>
+                    </div>
+                    <div class="columna-input">
+                        <input id="nombre" type="text" name="nombre" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>Apellido</label>
+                    </div>
+                    <div class="columna-input">
+                        <input type="text" name="apellido" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>
+                 Documento:
+                </label>
+                    </div>
+                    <div class="columna-input">
+                        <input type="text" name="documento" minlength="1" maxlength="8">
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>
+                         Genero:
+                        </label>
+                    </div>
+                    <div class="columna-input">
+                        <select name="genero">
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  </select>
+                    </div>
+
+                </div>
+                <div class="fila">
+                    <div class="columna-label">
+                        Fecha
+                    </div>
+                    <div class="columna-input">
+                        <input type="date" name="fechanacimiento" required>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="fila">
+                    <div class="columna-label">
+                        <label>
+               URL imagen:
+              </label>
+
+
+                    </div>
+                    <div class="columna-input">
+                        <input type="text" name="imagen" maxlength="200" minlength="1">
+                    </div>
+
+                </div>
+                <div class="fila-boton">
+                    <button id="registrar" class="boton-sumar" type="submit" value="agregar">Agregar</button>
+                    <button id="limpiar" class="boton-limpiar">Limpiar</button>
+                    <input type="number" id="cancha" name="canchaId">
+                </div>
+
+
+
+        </div>
+
+
+
+
+
+        </form>
+
+
+
+
+
+        
+
+
+</body>
+
+</html>

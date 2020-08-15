@@ -1,245 +1,289 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lexend Tera", sans-serif;
-    color: aliceblue;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Tera", sans-serif;
+  color: aliceblue;
 }
 
 :root {
-    --color-negro: rgba(0, 0, 0, 0.6);
-    --color-dorado: #ffd700;
-    --color-azul: rgba(0, 0, 139, 0.4);
+  --color-negro: rgba(0, 0, 0, 0.6);
+  --color-dorado: #ffd700;
+  --color-azul: rgba(0, 0, 139, 0.4);
 }
 
 body {
-    background-image: url("../img/chicas.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    background-attachment: fixed;
-    background-color: black;
-    width: 100%;
-    height: auto;
-    font-size: 1rem;
+  background-image: url("../img/chicas.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  background-color: black;
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
 }
 
 h1 {
-    font-size: calc(1rem * 4);
+  font-size: calc(1rem * 4);
 }
 
 h2 {
-    font-size: calc(1rem * 2);
-    margin: 2%;
+  font-size: calc(1rem * 2);
+  margin: 2%;
 }
 
 h1,
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .contenedor {
-    padding: 2%;
-    background-color: var(--color-negro);
-    width: 80%;
-    position: relative;
-    left: 8%;
-    margin: 0;
+  padding: 2%;
+  background-color: var(--color-negro);
+  width: 80%;
+  position: relative;
+  left: 8%;
+  margin: 0;
 }
 
 .fila {
-    display: table;
-    margin-top: 2%;
-    display: flex;
-    flex-direction: row;
+  display: table;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
 }
 
 .columna-label {
-    width: 25%;
-    margin-top: 1%;
+  width: 25%;
+  margin-top: 1%;
 }
 
 .columna-input {
-    width: 75%;
-    margin-top: 1%;
+  width: 75%;
+  margin-top: 1%;
 }
 
 .fila-boton {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 2%;
-    box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  box-sizing: border-box;
 }
 
 main {
-    width: 100%;
-    height: 80%;
+  width: 100%;
+  height: 80%;
 }
 
 .boton-sumar {
-    background-color: var(--color-negro);
-    width: 40%;
-    height: 10%;
-    padding: 2%;
-    flex-wrap: 1;
-    position: relative;
-    left: 5%;
-    /*aca quitamos el borde del boton*/
-    border: transparent;
+  background-color: var(--color-negro);
+  width: 40%;
+  height: 10%;
+  padding: 2%;
+  flex-wrap: 1;
+  position: relative;
+  left: 5%;
+  /*aca quitamos el borde del boton*/
+  border: transparent;
 }
 
 .boton-limpiar {
-    background-color: var(--color-negro);
-    width: 40%;
-    height: 10%;
-    padding: 2%;
-    flex-wrap: 1;
-    position: relative;
-    left: 10%;
-    /*aca quitamos el borde del boton*/
-    border: transparent;
+  background-color: var(--color-negro);
+  width: 40%;
+  height: 10%;
+  padding: 2%;
+  flex-wrap: 1;
+  position: relative;
+  left: 10%;
+  /*aca quitamos el borde del boton*/
+  border: transparent;
 }
 
 label {
-    font-size: 1rem;
-    width: 100%;
+  font-size: 1rem;
+  width: 100%;
 }
 
 input,
 select {
-    border-radius: 5px 5px 5px 5px;
-    width: 100%;
-    text-align: left;
-    color: black;
-    padding: 1%;
-    box-sizing: border-box;
+  border-radius: 5px 5px 5px 5px;
+  width: 100%;
+  text-align: left;
+  color: black;
+  padding: 1%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 800px) {
-    .columna-label,
-    .columna-input,
-    .columna-contacto,
-    .columna-redes {
-        width: 100%;
-        text-align: center;
-    }
-    .fila,
-    .fila-boton {
-        flex-direction: column;
-    }
-    .boton-sumar,
-    .boton-limpiar {
-        width: 100%;
-        margin-bottom: 1%;
-        flex-wrap: 1;
-        position: static;
-    }
+  .columna-label,
+  .columna-input,
+  .columna-contacto,
+  .columna-redes {
+    width: 100%;
+    text-align: center;
+  }
+  .fila,
+  .fila-boton,.fila-footer,
+  .columna-contacto,.columna-redes {
+    flex-direction: column;
+  }
+  .boton-sumar,
+  .boton-limpiar {
+    width: 100%;
+    margin-bottom: 1%;
+    flex-wrap: 1;
+    position: static;
+  }
 }
 
 label:hover {
-    text-decoration: underline 5px var(--color-dorado);
+  text-decoration: underline 5px var(--color-dorado);
 }
 
 button:hover {
-    color: var(--color-dorado);
+  color: var(--color-dorado);
 }
 
 a {
-    color: #00B7FF;
+  color: white;
+  text-decoration: none;
 }
 
 .nav {
-    background-color: cornsilk;
-    display: flex;
-    list-style: none;
-    text-align: center;
-    margin-bottom: 20px;
+  background-color: var(--color-negro);
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 20px;
+  
 }
 
 .nav-item {
-    flex-grow: 1;
+  flex-grow: 1;
+  
 }
 
 .nav-item_link {
-    display: block;
-    padding: 10px 0;
+  display: block;
+  padding: 10px 0;
 }
 
 .nav-item_link:hover {
-    background-color: crimson;
-    color: white;
+    text-decoration: underline 5px var(--color-dorado);
+  color: white;
 }
 
 .padre {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    border: 1px solid red;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  top: 10%;
+  
 }
 
 .hijo {
-    border-radius: 21px 21px 21px 21px;
-    width: calc(100% / 3);
-    background-color: var(--color-blanco);
-    font-size: 2vw;
-    flex-grow: 1;
-    margin: 1%;
-    border: 1px solid black;
+  border-radius: 21px 21px 21px 21px;
+  width: calc(100% / 3);
+  background-color: var(--color-negro);
+  font-size: 2vw;
+  flex-grow: 1;
+  margin: 1%;
+  border: 1px solid var(--color-dorado);
+  box-sizing: border-box;
+}
+.imagen-hijo{
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  
+  background-color: var(--color-negro);
+
+
+
 }
 
 .fondo {
-    width: 300px;
-    object-fit: contain;
-    height: 50%;
-    margin: 1%;
+   height: 100%;
+  object-fit:cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+ 
+  width: 100%;
+  border-radius: 20px;
+  
 }
 
-
 /* estetica para el formulario */
-
 
 /* card extraido del proyecto angular*/
 
 .oferta {
-    border-radius: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    width: auto;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: auto;
+  
+  
+
 }
 
 .imagen {
-    border-radius: 20px;
-    width: 50%;
-    height: auto;
-    max-width: 100%;
-    margin: 0;
-    object-fit: cover;
-    object-position: center center;
-    position: relative;
-    left: 25%
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center center;
+  position: relative;
+  left: 25%;
 }
-
 
 /*seccion de footer*/
 
 footer {
-    background-color: var(--color-negro);
-    width: 100%;
-    padding: 10%;
-    display: flex;
-    flex-direction: row;
+  background-color: var(--color-negro);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 .columna-contacto {
-    width: 50%;
-    margin-top: 1%;
-    border: 1px solid white;
+  width: 50%;
+    display: flex;
+  border: 1px solid white;
+  flex-direction: row;
 }
 
 .columna-redes {
-    width: 25%;
-    margin-top: 1%;
-    border: 1px solid white;
+  width: 50%;
+  border: 1px solid white;
+}
+
+.fila-footer {
+  display: flex;
+
+  width: 100%;
+
+  flex-direction: row;
+}
+
+.fila-footer a {
+  text-decoration: none;
+}
+
+.fila-footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+ 
 }

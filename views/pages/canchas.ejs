@@ -13,21 +13,28 @@
             <!-- 
           El atributo name nos sirve para conseguir la información
           e identificar al campo
-      -->
-            <label>
+
+                <label>
         Término de búsqueda:
         <input type="search" name="termino" />
       </label>
             <input type="submit" value="Buscar" />
         </form>
+      -->
+      
 
         <div class="padre">
             <% llamada.forEach((cancha)=> {%>
                 <div class="hijo">
-                    <a href="cancha/<%= cancha.id %>">
-          <img class="fondo" src="<%= cancha.imagen %>" alt="foto de portada" />
-        </a>
+                    <div class="imagen-hijo">
+                        <a href="cancha/<%= cancha.id %>">
+                            <img class="fondo" src="<%= cancha.imagen %>" alt="foto de portada" />
+                                           </a>
+                  
+                                  
 
+
+                    </div>
                     <p>
                         <%= cancha.nombre %>
                     </p>
@@ -37,6 +44,8 @@
                     <p>
                         <%= cancha.localidad %>
                     </p>
+
+                  
                 </div>
 
                 <% })%>
