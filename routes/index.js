@@ -19,11 +19,17 @@ router.get("/cancha/:id", async (req, res) => {
   res.render("pages/cancha", { cancha });
 });
 
+router.get("/backoffice", async (req, res) => {
+  res.render("pages/administrador");
+});
+
 /*-----------------------------------------------------------------*/
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+router.get("/",  async function (req, res, next) {
+  const llamada = await jugadores.getplayers();
+ // res.send(llamada);
+  res.render("pages/inicio", {llamada});
 });
 
 /* GET agregar page */
@@ -80,9 +86,9 @@ router.get("/jugador/:id", async (req, res) => {
 
 /* POST users listing. */
 
-router.post("/agregar_jugador", async (req,res) => {
+router.post("/agregar_jugador", async (req, res) => {
   console.log(req.body.params);
- 
+
   const jugador = await jugadores.createplayer(
     req.body.nombre,
     req.body.apellido,
@@ -92,12 +98,24 @@ router.post("/agregar_jugador", async (req,res) => {
     req.body.imagen,
     req.body.canchaId
   );
-  
-  
 
+  //console.log(jugador);
+  res.send(jugador);
+});
 
- //console.log(jugador);
- res.send(jugador);
+router.post("/agregar_cancha", async (req, res) => {
+  console.log(req.body.params);
+
+  const cancha = await canchas.createcourt(
+    req.body.nombre,
+    req.body.direccion,
+    req.body.partido,
+    req.body.localidad,
+    req.body.imagen
+  );
+
+  //console.log(jugador);
+  res.send(cancha);
 });
 
 /* GET users listing. */

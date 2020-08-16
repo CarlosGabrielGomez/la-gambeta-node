@@ -126,8 +126,10 @@ select {
     text-align: center;
   }
   .fila,
-  .fila-boton,.fila-footer,
-  .columna-contacto,.columna-redes {
+  .fila-boton,
+  .fila-footer,
+  .columna-contacto,
+  .columna-redes {
     flex-direction: column;
   }
   .boton-sumar,
@@ -158,12 +160,10 @@ a {
   list-style: none;
   text-align: center;
   margin-bottom: 20px;
-  
 }
 
 .nav-item {
   flex-grow: 1;
-  
 }
 
 .nav-item_link {
@@ -172,7 +172,7 @@ a {
 }
 
 .nav-item_link:hover {
-    text-decoration: underline 5px var(--color-dorado);
+  text-decoration: underline 5px var(--color-dorado);
   color: white;
 }
 
@@ -182,7 +182,6 @@ a {
   display: flex;
   flex-direction: row;
   top: 10%;
-  
 }
 
 .hijo {
@@ -195,27 +194,23 @@ a {
   border: 1px solid var(--color-dorado);
   box-sizing: border-box;
 }
-.imagen-hijo{
+.imagen-hijo {
   width: 100%;
   height: 50%;
   box-sizing: border-box;
-  
+
   background-color: var(--color-negro);
-
-
-
 }
 
 .fondo {
-   height: 100%;
-  object-fit:cover;
+  height: 100%;
+  object-fit: cover;
   background-repeat: no-repeat;
   position: relative;
   background-attachment: fixed;
- 
+
   width: 100%;
   border-radius: 20px;
-  
 }
 
 /* estetica para el formulario */
@@ -226,9 +221,6 @@ a {
   border-radius: 20px;
   font-family: Arial, Helvetica, sans-serif;
   width: auto;
-  
-  
-
 }
 
 .imagen {
@@ -259,14 +251,13 @@ footer {
 
 .columna-contacto {
   width: 50%;
-    display: flex;
-  border: 1px solid white;
+  display: flex;
+
   flex-direction: row;
 }
 
 .columna-redes {
   width: 50%;
-  border: 1px solid white;
 }
 
 .fila-footer {
@@ -285,5 +276,13 @@ footer {
   list-style: none;
   display: flex;
   flex-direction: row;
- 
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+th {
+  width: calc(100% / 4);
 }
