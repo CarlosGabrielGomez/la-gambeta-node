@@ -12,9 +12,11 @@ Este proyecto se ejecuta utilizando los  siguientes **software** :
 - DBeaver: https://dbeaver.io/download/publish 
 - Bitvise SSH Client : https://www.bitvise.com/ssh-client-download
 
-# Comandos en virtual-box
+# Descargar Proyecto Terminado
 
-Salir del modo reesclado :    ctrl-der+c
+> https://drive.google.com/drive/folders/1GZLfMkU5PhcXfB2Q3qWxU9TIjM_Q_tHN?usp=sharing
+
+ > **Nota:** las credenciales de acceso son: user->root y pass->toor
 
 ## Instalacion de UFW 
 Para habilitar configurar UFW o Uncomplicated Firewall ejecutando los siguientes comandos usando el gestor apt:
