@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
+<%- include('../partials/header.ejs'); -%>
 
-<head>
-    <title>Datos de la cancha</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-</head>
 
 <body>
     <%- include('../partials/nav.ejs'); -%>
 
-        <form action="/busqueda_proceso" method="GET">
-            <!-- 
+    <form action="/busqueda_proceso" method="GET">
+        <!-- 
           El atributo name nos sirve para conseguir la información
           e identificar al campo
 
@@ -21,34 +18,34 @@
             <input type="submit" value="Buscar" />
         </form>
       -->
-      
+
 
         <div class="padre">
             <% llamada.forEach((cancha)=> {%>
-                <div class="hijo">
-                    <div class="imagen-hijo">
-                        <a href="cancha/<%= cancha.id %>">
-                            <img class="fondo" src="<%= cancha.imagen %>" alt="foto de portada" />
-                                           </a>
-                  
-                                  
+            <div class="hijo">
+                <div class="imagen-hijo">
+                    <a href="cancha/<%= cancha.id %>">
+                        <img class="fondo" src="<%= cancha.imagen %>" alt="foto de portada" />
+                    </a>
 
 
-                    </div>
-                    <p>
-                        <%= cancha.nombre %>
-                    </p>
-                    <p>
-                        <%= cancha.direccion %>
-                    </p>
-                    <p>
-                        <%= cancha.localidad %>
-                    </p>
 
-                  
+
                 </div>
+                <p>
+                    <%= cancha.nombre %>
+                </p>
+                <p>
+                    <%= cancha.direccion %>
+                </p>
+                <p>
+                    <%= cancha.localidad %>
+                </p>
 
-                <% })%>
+
+            </div>
+
+            <% })%>
         </div>
         <%- include('../partials/footer.ejs'); -%>
 </body>

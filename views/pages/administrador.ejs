@@ -1,95 +1,92 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Administrador</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-</head>
+<%- include('../partials/header.ejs'); -%>
 
 <body>
     <%- include('../partials/nav.ejs'); -%>
-        <div class="contenedor">
-            <h2>Ingrese los datos de la nueva cancha</h2>
-            <form action="/agregar_cancha" method="POST">
-                <!--datos personales-->
-                <div class="fila">
-                    <div class="columna-label">
-                        <label>Nombre</label>
-                    </div>
-                    <div class="columna-input">
-                        <input id="nombre" type="text" name="nombre" required>
-                    </div>
+    <div class="contenedor">
+        <h2>Ingrese los datos de la nueva cancha</h2>
+        <form action="/agregar_cancha" method="POST">
+            <!--datos personales-->
+            <div class="fila">
+                <div class="columna-label">
+                    <label>Nombre</label>
                 </div>
-                <div class="fila">
-                    <div class="columna-label">
-                        <label>Direccion</label>
-                    </div>
-                    <div class="columna-input">
-                        <input type="text" name="direccion" required>
-                    </div>
+                <div class="columna-input">
+                    <input id="nombre" type="text" name="nombre" required>
                 </div>
-                <div class="fila">
-                    <div class="columna-label">
-                        <label>
-                 Partido:
-                </label>
-                    </div>
-                    <div class="columna-input">
-                        <input type="text" name="partido" required>
-                    </div>
+            </div>
+            <div class="fila">
+                <div class="columna-label">
+                    <label>Direccion</label>
                 </div>
+                <div class="columna-input">
+                    <input type="text" name="direccion" required>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="columna-label">
+                    <label>
+                        Partido:
+                    </label>
+                </div>
+                <div class="columna-input">
+                    <input type="text" name="partido" required>
+                </div>
+            </div>
 
-                <div class="fila">
-                   
-                    <div class="columna-label">
-                        <label>
-                            Localidad
-                        </label>
+            <div class="fila">
 
-                    </div>
-                    <div class="columna-input">
+                <div class="columna-label">
+                    <label>
+                        Localidad
+                    </label>
+
+                </div>
+                <div class="columna-input">
                     <input type="text" required name="localidad">
 
-                    </div>
-                    
-
-                </div>
-               
-
-                <div class="fila">
-                    <div class="columna-label">
-                        <label>
-               URL imagen:
-              </label>
-
-
-                    </div>
-                    <div class="columna-input">
-                        <input type="text" name="imagen" maxlength="200" minlength="1">
-                    </div>
-
-                </div>
-                <div class="fila-boton">
-                    <button id="registrar" class="boton-sumar" type="submit" value="agregar">Agregar</button>
-                   
-                  
                 </div>
 
 
-
-        </div>
-
+            </div>
 
 
+            <div class="fila">
+                <div class="columna-label">
+                    <label>
+                        URL imagen:
+                    </label>
 
 
-        </form>
+                </div>
+                <div class="columna-input">
+                    <input type="text" name="imagen" maxlength="200" minlength="1">
+                </div>
+
+            </div>
+            <div class="fila-boton">
+                <button id="registrar" class="boton-sumar" type="submit" value="agregar">Agregar</button>
+
+
+            </div>
+
+
+
+    </div>
 
 
 
 
 
-        
+    </form>
+
+
+
+
+
+
 
 
 </body>

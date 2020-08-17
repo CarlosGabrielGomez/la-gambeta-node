@@ -1,21 +1,31 @@
 var express = require("express");
 var router = express.Router();
-
-const canchas = require("../api/cancha");
 const jugadores = require("../api/jugador");
+const canchas = require("../api/cancha");
 
 /*+-------------------------------------------------------------+
-  |                             SITIOS      
+  |                             PAGINAS      
   +-------------------------------------------------------------+
 */
 /* GET users listing. */
+
+/* GET home page. */
+
+router.get("/", async function (req, res, next) {
+  const llamada = await jugadores.getplayers();
+
+  res.render("pages/inicio",{ llamada });
+});
+
 router.get("/inscribirme", async function (req, res, next) {
   const llamada = await canchas.getcourts();
   res.render("pages/canchas", { llamada });
 });
 
+/*esto por ahora funciona */
 router.get("/cancha/:id", async (req, res) => {
   const cancha = await canchas.getCourtById(req.params.id);
+
   res.render("pages/cancha", { cancha });
 });
 
@@ -24,13 +34,6 @@ router.get("/backoffice", async (req, res) => {
 });
 
 /*-----------------------------------------------------------------*/
-
-/* GET home page. */
-router.get("/",  async function (req, res, next) {
-  const llamada = await jugadores.getplayers();
- // res.send(llamada);
-  res.render("pages/inicio", {llamada});
-});
 
 /* GET agregar page */
 router.get("/agregar", function (req, res, next) {

@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>La Gambeta</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+<%- include('../partials/header.ejs'); -%>
 
-  <body>
-    <%- include('../partials/nav.ejs'); -%>
+<body>
+  <%- include('../partials/nav.ejs'); -%>
 
-    <h1>Bienvenidos a la Gambeta</h1>
-
-    <div class="contenedor">
-      <table>
-        <thead>
-          <th>
-            Jugador
-          </th>
-
-          <th>
-            documento
-          </th>
+  <h1>Bienvenidos a la Gambeta</h1>
 
 
-          <th>
-            Cancha
-          </th>
+
+  <div class="contenedor">
+    <table>
+      <thead>
+        <th>
+          Jugador
+        </th>
+
+        <th>
+          documento
+        </th>
+
+        <th>
+          Cancha
+        </th>
+
+        <th>
+          direccion
+        </th>
+      </thead>
+      <% llamada.forEach((jugador)=> {%>
+      <tr>
+        <td>
+          <%= jugador.apellido %> , <%= jugador.apellido %>
+        </td>
+
+        <td>
+          <%= jugador.documento %>
+        </td>
+
+        <td>
+          <%= jugador.cancha.nombre %>
+        </td>
+
+        <td>
+          <%= jugador.cancha.direccion%>
+        </td>
+      </tr>
+
+      <% })%>
+    </table>
 
 
-          <th>
-            direccion
-          </th>
+  </div>
+  <%- include('../partials/footer.ejs'); -%>
+</body>
 
-
-        </thead>
-        <% llamada.forEach((jugador)=> {%>
-        <tr>
-          <td>
-            <%= jugador.apellido %> , <%= jugador.apellido %>
-          </td>
-
-          <td>
-            <%= jugador.documento %>
-          </td>
-
-
-          <td>
-            <%= jugador.cancha.nombre %>
-          </td>
-
-
-          <td>
-            <%= jugador.cancha.direccion%>
-          </td>
-        </tr>
-
-        <% })%>
-      </table>
-    </div>
-    <%- include('../partials/footer.ejs'); -%>
-  </body>
 </html>

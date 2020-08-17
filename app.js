@@ -8,11 +8,8 @@ var logger = require('morgan');
 
 const db= require('./models');
 
-///
+
 var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/users');
-//var databaseRouter = require('./routes/database');
-//var siteRouter = require('./routes/site');
 
 var app = express();
 
