@@ -14,7 +14,7 @@ const canchas = require("../api/cancha");
 router.get("/", async function (req, res, next) {
   const llamada = await jugadores.getplayers();
 
-  res.render("pages/inicio",{ llamada });
+  res.render("pages/inicio", { llamada });
 });
 
 router.get("/inscribirme", async function (req, res, next) {
